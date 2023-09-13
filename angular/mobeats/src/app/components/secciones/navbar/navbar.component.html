@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <div *ngFor="let seccion of secciones; let isFirst = first">
+            <ng-container *ngIf="isFirst && isFirstIteration; else notFirst">
+                <a class="navbar-brand" [routerLink]="'/home'">
+                    <img [src]="'http://localhost:1337' + seccion.attributes.imagen.data[0].attributes.url" alt="Logo"
+                        width="200px" height="50px">
+                </a>
+            </ng-container>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ng-template #notFirst>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="'/' + seccion.attributes.nombre">
+                                <p>{{ seccion.attributes.nombre }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>

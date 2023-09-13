@@ -1,0 +1,19 @@
+<div *ngFor="let seccion of tarjetas" class="tarjeta-item">
+    <div *ngFor="let tarjeta of seccion.attributes.tarjetas.data">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h6>{{ tarjeta.attributes.titulo }}</h6>
+            <h1>{{ tarjeta.attributes.subtitulo }}</h1>
+            <p>{{ tarjeta.attributes.texto }}</p>
+            <button class="btn btn-primary" *ngIf="tarjeta.attributes.boton">{{ tarjeta.attributes.boton }}</button>
+          </div>
+          <div class="col-6">
+            <div *ngFor="let imagen of tarjeta.attributes.imagenes.data">
+              <img [src]="'http://localhost:1337' + imagen.attributes.url " alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
