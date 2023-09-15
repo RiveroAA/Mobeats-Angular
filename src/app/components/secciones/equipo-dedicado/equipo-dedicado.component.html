@@ -1,0 +1,19 @@
+<div *ngFor="let tarjeta of tarjetas" class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-9">
+            <div *ngFor="let tarjetaItem of tarjeta.attributes.tarjetas.data" class="card-body">
+                <h2 class="card-subtitle">{{ tarjetaItem.attributes.subtitulo }}</h2>
+                <h1 class="card-title">{{ tarjetaItem.attributes.titulo }}</h1>
+                <p class="card-text">{{ tarjetaItem.attributes.texto }}</p>
+                <button class="btn btn-primary" *ngIf="tarjetaItem.attributes.boton">{{ tarjetaItem.attributes.boton }}</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div *ngFor="let tarjetaItem of tarjeta.attributes.tarjetas.data">
+                <div *ngFor="let imagen of tarjetaItem.attributes.imagenes.data">
+                    <img *ngIf="imagen.attributes.url" [src]="'http://localhost:1337' + imagen.attributes.url" [alt]="imagen.attributes.name" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
