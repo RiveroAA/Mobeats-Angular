@@ -1,0 +1,22 @@
+<head>
+  <title>Home - Mobeats io</title>
+</head>
+<div *ngFor="let tarjeta of tarjetas" class="tarjeta-item">
+  <div *ngFor="let item of tarjeta.attributes.tarjetas.data">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h6>{{ item.attributes.titulo }}</h6>
+          <h1>{{ item.attributes.subtitulo }}</h1>
+          <p>{{ item.attributes.texto }}</p>
+          <button class="btn btn-primary" *ngIf="item.attributes.boton">{{ item.attributes.boton }}</button>
+        </div>
+        <div class="col-6">
+          <div *ngFor="let imagen of item.attributes.imagenes.data">
+            <img [src]="'http://localhost:1337' + imagen.attributes.url " alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
