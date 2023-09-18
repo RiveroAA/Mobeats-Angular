@@ -70,8 +70,8 @@ interface Empleados {
 
 @Component({
   selector: 'app-sobre-nosotros',
-  templateUrl: './sobre-nosotros.component.html',
-  styleUrls: ['./sobre-nosotros.component.css']
+  templateUrl: './nosotros.component.html',
+  styleUrls: ['./nosotros.component.css']
 })
 export class SobreNosotrosComponent {
   tarjetas: Tarjetas[] = [];
