@@ -32,21 +32,21 @@ interface Tarjeta {
 }
 
 @Component({
-  selector: 'app-servicios',
-  templateUrl: './servicios.component.html',
-  styleUrls: ['./servicios.component.css']
+  selector: 'app-testimonios',
+  templateUrl: './testimonios.component.html',
+  styleUrls: ['./testimonios.component.css']
 })
-export class ServiciosComponent {
+export class TestimoniosComponent {
   tarjetas: Tarjeta[] = [];
 
   constructor(private tarjetasService: TarjetasService) {}
 
   ngOnInit() {
-    this.mostrarTarjetasServicios();
+    this.mostrarTarjetasTestimonios();
   }
 
-  mostrarTarjetasServicios() {
-    this.tarjetasService.pedirTarjetasServicios().subscribe((response: any) => {
+  mostrarTarjetasTestimonios() {
+    this.tarjetasService.pedirTarjetasTestimonios().subscribe((response: any) => {
       this.tarjetas = response.data;
     });
   }

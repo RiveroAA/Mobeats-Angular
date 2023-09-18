@@ -32,9 +32,9 @@ interface Tarjetas {
 export class CasosDeExitoComponent {
   tarjetas: Tarjetas[] = [];
   isFirstIteration: boolean = true;
-  
-  constructor(private tarjetasService: TarjetasService) { }
-  
+
+  constructor(private tarjetasService: TarjetasService) {}
+
   ngOnInit() {
     this.mostrarTarjetasCasosDeExito();
   }

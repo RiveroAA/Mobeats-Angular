@@ -28,11 +28,10 @@ interface Tarjetas {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   tarjetas: Tarjetas[] = [];
-  isFirstIteration: boolean = true;
 
-  constructor(private tarjetasService: TarjetasService) { }
+  constructor(private tarjetasService: TarjetasService) {}
 
   ngOnInit() {
     this.mostrarTarjetasHome();

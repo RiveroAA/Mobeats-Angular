@@ -16,6 +16,7 @@ import { ComoLoHacemosComponent } from './components/secciones/como-lo-hacemos/c
 import { ContactoComponent } from './components/secciones/contacto/contacto.component';
 import { EnglishComponent } from './components/secciones/english/english.component';
 import { EmpleosComponent } from './components/secciones/empleos/empleos.component';
+import { TestimoniosComponent } from './components/secciones/testimonios/testimonios.component';
 import { ServiciosComponent } from './components/secciones/servicios/servicios.component';
 import { SolucionesComponent } from './components/secciones/soluciones/soluciones.component';
 import { ExploracionComponent } from './components/secciones/exploracion/exploracion.component';
@@ -42,6 +43,10 @@ import { FormularioEmpleosComponent } from './components/formularios/formulario-
     ContactoComponent,
     EnglishComponent,
     EmpleosComponent,
+    FooterComponent,
+    HomeComponent,
+    CasosDeExitoComponent,
+    TestimoniosComponent,
     ServiciosComponent,
     SolucionesComponent,
     ExploracionComponent,
@@ -54,7 +59,9 @@ import { FormularioEmpleosComponent } from './components/formularios/formulario-
     FormularioEmpleosComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, AppRoutingModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
