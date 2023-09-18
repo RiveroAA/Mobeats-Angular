@@ -8,13 +8,11 @@ import { UnidadComponent } from './components/unidad/unidad.component';
 import { FooterComponent } from './components/secciones/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CasosDeExitoComponent } from './components/secciones/casos-de-exito/casos-de-exito.component';
-import { AppRoutingModule } from './modules/app-routing/app-routing.module';
+import { AppRoutingModule } from './modules/app-routing.module';
 import { HomeComponent } from './components/secciones/home/home.component';
-import { SobreNosotrosComponent } from './components/secciones/sobre-nosotros/sobre-nosotros.component';
-import { QueHacemosComponent } from './components/secciones/que-hacemos/que-hacemos.component';
-import { ComoLoHacemosComponent } from './components/secciones/como-lo-hacemos/como-lo-hacemos.component';
 import { ContactoComponent } from './components/secciones/contacto/contacto.component';
 import { EnglishComponent } from './components/secciones/english/english.component';
+import { NosotrosComponent } from './components/secciones/nosotros/nosotros.component';
 import { EmpleosComponent } from './components/secciones/empleos/empleos.component';
 import { TestimoniosComponent } from './components/secciones/testimonios/testimonios.component';
 import { ServiciosComponent } from './components/secciones/servicios/servicios.component';
@@ -37,9 +35,7 @@ import { FormularioEmpleosComponent } from './components/formularios/formulario-
     FooterComponent,
     CasosDeExitoComponent,
     HomeComponent,
-    SobreNosotrosComponent,
-    QueHacemosComponent,
-    ComoLoHacemosComponent,
+    NosotrosComponent,
     ContactoComponent,
     EnglishComponent,
     EmpleosComponent,
