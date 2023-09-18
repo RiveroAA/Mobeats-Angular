@@ -11,4 +11,8 @@ export class SeccionesService {
   pedirSeccionesNavBar(){
     return this.http.get<any[]>('http://localhost:1337/api/secciones?populate=*&filters[id_padre][$eq]=1&sort=orden');
   }
+
+  pedirSeccionesNosotros(){
+    return this.http.get<any[]>('http://localhost:1337/api/secciones?populate=tarjetas.imagenes&filters[id_padre][$eq]=6');
+  }
 }

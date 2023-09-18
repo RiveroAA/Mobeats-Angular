@@ -48,5 +48,15 @@ export class TarjetasService {
     return this.http.get<any[]>('http://localhost:1337/api/secciones?populate=tarjetas.imagenes&filters[id][$eq]=15')
   }
 
-  
+  pedirTarjetasNosotros() {
+    return this.http.get<any[]>('http://localhost:1337/api/secciones?populate=tarjetas.imagenes&filters[id][$eq]=6');
+  }
+
+  pedirTarjetasContacto(){
+    return this.http.get<any[]>('http://localhost:1337/api/secciones?populate=tarjetas.imagenes&filters[id][$eq]=16');
+  }
+
+  pedirTarjetasEmpleos() {
+    return this.http.get<any[]>('http://localhost:1337/api/secciones?populate=tarjetas.imagenes&filters[id][$eq]=19');
+  }
 }
