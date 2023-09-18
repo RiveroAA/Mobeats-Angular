@@ -69,11 +69,11 @@ interface Empleados {
 }
 
 @Component({
-  selector: 'app-sobre-nosotros',
+  selector: 'app-nosotros',
   templateUrl: './nosotros.component.html',
   styleUrls: ['./nosotros.component.css']
 })
-export class SobreNosotrosComponent {
+export class NosotrosComponent {
   tarjetas: Tarjetas[] = [];
   secciones: SeccionesNosotros[] = [];
   sucursales: Sucursales[] = [];
