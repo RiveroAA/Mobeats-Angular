@@ -16,6 +16,7 @@ import { DesarrolloAMedidaComponent } from './components/secciones/desarrollo-a-
 import { EquipoDeRescateComponent } from './components/secciones/equipo-de-rescate/equipo-de-rescate.component';
 import { EquipoDedicadoComponent } from './components/secciones/equipo-dedicado/equipo-dedicado.component';
 import { AumentoDePersonalComponent } from './components/secciones/aumento-de-personal/aumento-de-personal.component';
+import { NosotrosComponent } from './components/secciones/nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AumentoDePersonalComponent } from './components/secciones/aumento-de-pe
     DesarrolloAMedidaComponent,
     EquipoDeRescateComponent,
     EquipoDedicadoComponent,
-    AumentoDePersonalComponent
+    AumentoDePersonalComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,
