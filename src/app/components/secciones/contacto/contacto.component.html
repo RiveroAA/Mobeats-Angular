@@ -1,4 +1,7 @@
 <div *ngFor="let seccion of tarjetas" class="tarjeta-item">
+  <head>
+    <title>{{ seccion.attributes.nombre}} - Mobeats io</title>
+  </head>
     <div *ngFor="let tarjeta of seccion.attributes.tarjetas.data">
       <div class="container">
         <div class="row">
@@ -17,3 +20,4 @@
       </div>
     </div>
   </div>
+<app-formulario-hablemos></app-formulario-hablemos>

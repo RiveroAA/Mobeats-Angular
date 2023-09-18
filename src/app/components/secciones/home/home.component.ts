@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TarjetasService } from 'src/app/services/tarjetas/tarjetas.service';
 
 interface Tarjetas {
   attributes: {
+    nombre: string;
     tarjetas: {
       data: {
         attributes: {
@@ -22,24 +23,23 @@ interface Tarjetas {
     };
   };
 }
-
 @Component({
-  selector: 'app-casos-de-exito',
-  templateUrl: './casos-de-exito.component.html',
-  styleUrls: ['./casos-de-exito.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class CasosDeExitoComponent {
+export class HomeComponent implements OnInit {
   tarjetas: Tarjetas[] = [];
   isFirstIteration: boolean = true;
 
   constructor(private tarjetasService: TarjetasService) { }
 
   ngOnInit() {
-    this.mostrarTarjetasCasosDeExito();
+    this.mostrarTarjetasHome();
   }
 
-  mostrarTarjetasCasosDeExito() {
-    this.tarjetasService.pedirTarjetasCasosDeExito().subscribe((response: any) => {
+  mostrarTarjetasHome() {
+    this.tarjetasService.pedirTarjetasHome().subscribe((response: any) => {
       this.tarjetas = response.data;
     });
   }
