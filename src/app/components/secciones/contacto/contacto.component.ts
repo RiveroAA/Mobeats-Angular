@@ -3,6 +3,7 @@ import { TarjetasService } from 'src/app/services/tarjetas/tarjetas.service';
 
 interface Tarjetas {
   attributes: {
+    nombre: string;
     tarjetas: {
       data: {
         attributes: {

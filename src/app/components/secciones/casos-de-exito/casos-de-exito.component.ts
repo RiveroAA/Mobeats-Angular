@@ -30,12 +30,11 @@ interface Tarjetas {
   styleUrls: ['./casos-de-exito.component.css']
 })
 export class CasosDeExitoComponent {
-  title = 'Mobeats';
   tarjetas: Tarjetas[] = [];
   isFirstIteration: boolean = true;
-
+  
   constructor(private tarjetasService: TarjetasService) { }
-
+  
   ngOnInit() {
     this.mostrarTarjetasCasosDeExito();
   }

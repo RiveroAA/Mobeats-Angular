@@ -5,6 +5,7 @@ import { GeneralService } from 'src/app/services/general/general.service';
 
 interface Tarjetas {
   attributes: {
+    nombre: string;
     tarjetas: {
       data: {
         attributes: {
