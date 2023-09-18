@@ -42,10 +42,10 @@
                 </div>
                 <div *ngIf="indice==2">
                     <div *ngFor="let empleado of empleados">
+                        <img [src]="'http://localhost:1337' + empleado.attributes.imagen.data.attributes.url ">
                         <h6>{{empleado.attributes.nombre}}</h6>
                         <p>{{empleado.attributes.puesto}}</p>
                         <p>{{empleado.attributes.email}}</p>
-                        <img [src]="'http://localhost:1337' + empleado.attributes.imagen.data.attributes.url ">
                     </div>
                 </div>
             </div>
